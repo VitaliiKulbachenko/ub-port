@@ -2,7 +2,12 @@
 sudo apt-get update && sudo apt-get upgrade
 
 #install base
-sudo apt-get install -y git curl wget rar
+sudo apt-get install -y git curl wget rar vim
+
+#realvnc viever
+cd /tmp
+wget https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.731-Linux-x64.deb
+sudo dpkg -i VNC-Viewer-6.17.731-Linux-x64.deb
 
 #install Filezilla
 cd /tmp
