@@ -1,5 +1,4 @@
-sudo apt update -y
-sudo apt upgrade -y
+sudo apt update && sudo apt upgrade 
 sudo apt-get install -y git curl wget rar vim vlc
 
 #Intall unity-tweak-tool
@@ -16,6 +15,12 @@ sudo echo "add-apt-repository ppa:atareao/telegram"
 sudo apt update
 sudo apt install telegram
 
+#Skype
+cd /tmp
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo dpkg -i skypeforlinux-64.deb
+sudo apt-get install -y -f
+
 #Teamviewer
 cd /tmp
 wget https://download.teamviewer.com/download/teamviewer_i386.deb
@@ -28,7 +33,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get install -y -f
 
-#wine
+#Wine
 sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/Release.key
 sudo apt-key add Release.key
@@ -36,13 +41,13 @@ sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 sudo apt-get update
 sudo apt-get install --install-recommends winehq-stable
 
-#indicator-ip
+#Indicator-ip
 sudo echo "apt-add-repository ppa:bovender/bovender"
 sudo apt-get update
 sudo apt-get install -y indicator-ip
 sudo indicator-ip -i wlp6s0  --autostart 
 
-#RealVnc
+#Vnc server
 cd /tmp
 wget https://www.realvnc.com/download/file/vnc.files/VNC-6.1.1-Linux-x64-DEB.tar.gz
 tar -xvf VNC-6.1.1-Linux-x64-DEB.tar.gz
