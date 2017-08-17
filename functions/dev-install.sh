@@ -36,3 +36,10 @@ sudo dpkg -i virtualbox-5.1_5.1.26-117224~Ubuntu~xenial_amd64.deb
 sudo apt-get install -y  -f
 
 
+#MriaDB
+sudo apt-get install software-properties-common
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://mariadb.mirror.triple-it.nl/repo/10.2/ubuntu xenial main'
+sudo apt update && sudo apt install mariadb-server mariadb-client
+
+
