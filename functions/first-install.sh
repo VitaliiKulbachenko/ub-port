@@ -45,7 +45,7 @@ sudo apt-get install --install-recommends winehq-stable
 sudo echo "apt-add-repository ppa:bovender/bovender"
 sudo apt-get update
 sudo apt-get install -y indicator-ip
-sudo indicator-ip -i wlp6s0  --autostart 
+sudo indicator-ip -i enp3s0  --autostart 
 
 #Vnc server
 cd /tmp
