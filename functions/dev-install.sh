@@ -1,20 +1,8 @@
-#Update system
-sudo apt-get update && sudo apt-get upgrade
-
-#Install base
-sudo apt-get install -y git curl wget rar vim
 
 #Vnc viever
 cd /tmp
 wget https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.731-Linux-x64.deb
 sudo dpkg -i VNC-Viewer-6.17.731-Linux-x64.deb
-
-#Filezilla
-cd /tmp
-wget http://filezilla.ru/download/FileZilla_3.27.0.1_x86_64-linux-gnu.tar.bz2
-tar -xvjf FileZilla_3.27.0.1_x86_64-linux-gnu.tar.bz2
-sudo mv FileZilla3/ /opt/filezilla3/
-sudo ln -s /opt/filezilla3/bin/filezilla /usr/local/bin/filezilla
 
 #PHPShtorm
 cd /tmp
