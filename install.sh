@@ -18,7 +18,6 @@ export TOOLS_DIR="${ROOTDIR}/tools"
 . ${CONF_DIR}/core
 
 # Import functions in specified order.
-. ${FUNCTIONS_DIR}/first_install.sh
 
 cat <<EOF
 
@@ -26,18 +25,19 @@ cat <<EOF
 * Start  Configurations
 ********************************************************************
 EOF
-user_confit()
+
+user_config($1)
 {
 
-
+echo "user"
 
 }
 
 
-dev_config()
+dev_config($1 $2)
 {
 
-
+echo "dev"
 }
 
 
