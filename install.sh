@@ -10,14 +10,6 @@ else
 fi
 
 cd ${ROOTDIR}
-export FUNCTIONS_DIR="${ROOTDIR}/functions"
-. ${FUNCTIONS_DIR}/filezilla.sh
-. ${FUNCTIONS_DIR}/first-install.sh
-
-filezilla
-
-<<<<<<< HEAD
-=======
 export CONF_DIR="${ROOTDIR}/conf"
 export FUNCTIONS_DIR="${ROOTDIR}/functions"
 export TOOLS_DIR="${ROOTDIR}/tools"
@@ -34,8 +26,18 @@ cat <<EOF
 * Start  Configurations
 ********************************************************************
 EOF
+user_confit()
+{
 
 
-firstInstall
 
->>>>>>> f63e38b5cd5b152b67d1acec96dd4d3e1ed13c08
+}
+
+
+dev_config()
+{
+
+
+}
+
+
