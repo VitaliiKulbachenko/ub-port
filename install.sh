@@ -10,8 +10,9 @@ else
 fi
 
 cd ${ROOTDIR}
+export FUNCTIONS_DIR="${ROOTDIR}/functions"
+. ${FUNCTIONS_DIR}/filezilla.sh
+. ${FUNCTIONS_DIR}/first-install.sh
 
-export FIRST_INSTALL="${ROOTDIR}/first-install"
-export FIRST_INSTALL_DEV="${ROOTDIR}/first-install-dev"
-#install first install
-cd ${FIRST_INSTALL} && bash install.sh
+filezilla
+
