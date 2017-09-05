@@ -10,7 +10,6 @@ else
 fi
 
 cd ${ROOTDIR}
-
 export CONF_DIR="${ROOTDIR}/conf"
 export FUNCTIONS_DIR="${ROOTDIR}/functions"
 export TOOLS_DIR="${ROOTDIR}/tools"
@@ -19,7 +18,6 @@ export TOOLS_DIR="${ROOTDIR}/tools"
 . ${CONF_DIR}/core
 
 # Import functions in specified order.
-. ${FUNCTIONS_DIR}/first_install.sh
 
 cat <<EOF
 
@@ -28,6 +26,18 @@ cat <<EOF
 ********************************************************************
 EOF
 
+user_config($1)
+{
 
-firstInstall
+echo "user"
+
+}
+
+
+dev_config($1 $2)
+{
+
+echo "dev"
+}
+
 
