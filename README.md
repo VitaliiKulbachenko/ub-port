@@ -3,6 +3,7 @@
 ```bash
 git clone https://github.com/VitaliiKulbachenko/ub-port.git
 ```
+```bash
 cd ub-port
 ```
 ```bash
