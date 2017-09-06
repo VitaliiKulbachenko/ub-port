@@ -13,4 +13,8 @@ docker () {
     #добавьте своего пользователя в группу docker:
     sudo usermod -aG docker $(whoami)
     gnome-session-quit
+
+    #Install docker-compose	
+    sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.16.0/docker-compose-$(uname -s)-$(uname -m)"
+    chmod +x /usr/local/bin/docker-compose
 }
