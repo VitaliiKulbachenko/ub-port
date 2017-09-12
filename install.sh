@@ -12,9 +12,32 @@ else
 fi
 
 cd ${ROOTDIR}
-export CONF_DIR="${ROOTDIR}/conf"
 export FUNCTIONS_DIR="${ROOTDIR}/functions"
 export TOOLS_DIR="${ROOTDIR}/tools"
+
+
+ask_confirm()
+{
+    # Usage: ask_confirm 'prompt text'
+    prompt_text="${1}"
+    echo -ne "${prompt_text} [y|N]"
+    read ANSWER
+    case ${ANSWER} in
+        Y|y ) : ;;
+        N|n|* ) return 1 ;;
+    esac
+}
+
+
+ECHO_QUESTION()
+{
+    if [ X"$1" == X"-n" ]; then
+        shift 1
+        echo -ne "${_QUESTION_FLAG} $@"
+    else
+        echo -e "${_QUESTION_FLAG} $@"
+    fi
+}
 
 
 # Import functions in specified order.
@@ -38,6 +61,7 @@ export TOOLS_DIR="${ROOTDIR}/tools"
 . ${FUNCTIONS_DIR}/wine.sh
 . ${FUNCTIONS_DIR}/winetricks.sh
 . ${FUNCTIONS_DIR}/winusb.sh
+. ${FUNCTIONS_DIR}/gscan2pdf.sh
 
 clear
 cat <<EOF
